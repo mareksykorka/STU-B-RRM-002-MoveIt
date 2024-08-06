@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<robot name="abb_irb4600_w_eef" xmlns:xacro="http://wiki.ros.org/xacro">
+    <!-- include macros for robot and the eef model -->
+    <xacro:include filename="$(find abb_irb4600_support)/urdf/irb4600_60_205_w_eef_macro.xacro"/>
+    <xacro:include filename="$(find eef_simple)/urdf/eef_simple_macro.xacro"/>
+
+    <!-- create the robot + eef combo itself as a macro -->
+    <xacro:macro name="abb_irb4600_w_eef" params="prefix">
+        <!-- instantiate robot and eef model -->
+        <xacro:abb_irb4600_60_205 prefix="${prefix}" using_eef="true"/>
+        <xacro:eef_simple_macro   prefix="${prefix}"/>
+
+        <!-- Attach eef to robot model -->
+        <joint name="${prefix}flange-${prefix}tool_base" type="fixed">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <parent link="${prefix}flange" />
+            <child link="${prefix}tool_base" />
+        </joint>
+
+        <!-- ROS-Industrial Attach 'tool0' frame to eef: all-zeros tool frame -->
+        <joint name="${prefix}tool_frame-${prefix}tool0" type="fixed">
+            <origin xyz="0 0 0" rpy="0 ${radians(90)} 0" />
+            <parent link="${prefix}tool_frame" />
+            <child link="${prefix}tool0" />
+        </joint>
+    </xacro:macro>
+
+    <xacro:abb_irb4600_w_eef prefix=""/>
+</robot>
