@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<package format="2">
+    <name>zad2_models</name>
+    <version>0.1.0</version>
+    <description>The zad2_models package</description>
+    <author>Marek Sykorka</author>
+    <maintainer email="xsykorka@stuba.sk">Marek Sykorka</maintainer>
+    <license>TODO</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <export>
+        <architecture_independent/>
+    </export>
+</package>

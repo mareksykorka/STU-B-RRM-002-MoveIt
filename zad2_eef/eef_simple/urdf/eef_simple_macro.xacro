@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="eef_simple_macro" params="prefix">
+        <!-- link list -->
+            <link name="${prefix}tool_base">
+                <visual>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                    <geometry>
+                        <mesh filename="package://eef_simple/meshes/visual/simple_effector.stl"/>
+                    </geometry>
+                    <material name="grey">
+                        <color rgba="0.6 0.6 0.6 1.0"/>
+                    </material>
+                </visual>
+                <collision>
+                    <origin xyz="0 0 0" rpy="0 0 0"/>
+                    <geometry>
+                        <mesh filename="package://eef_simple/meshes/collision/simple_effector.stl"/>
+                    </geometry>
+                </collision>
+            </link>
+
+            <link name="${prefix}tool_frame"/>
+        <!-- end of link list -->
+
+        <!-- joint list -->
+            <joint name="${prefix}tool_base-${prefix}tool_frame" type="fixed">
+                <origin xyz="0.18 0 0" rpy="0 0 0"/>
+                <parent link="${prefix}tool_base"/>
+                <child link="${prefix}tool_frame"/>
+            </joint>
+        <!-- end of joint list -->
+    </xacro:macro>
+</robot>

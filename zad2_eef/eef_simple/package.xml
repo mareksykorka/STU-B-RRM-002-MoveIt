@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<package format="2">
+    <name>eef_simple</name>
+    <version>0.1.0</version>
+    <description>The eef_simple package</description>
+    <author>Marek Sykorka</author>
+    <maintainer email="xsykorka@stuba.sk">Marek Sykorka</maintainer>
+    <license>TODO</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <!--<test_depend>roslaunch</test_depend>-->
+
+    <exec_depend>joint_state_publisher</exec_depend>
+    <exec_depend>robot_state_publisher</exec_depend>
+    <exec_depend>rviz</exec_depend>
+    <exec_depend>xacro</exec_depend>
+
+    <export>
+        <architecture_independent/>
+    </export>
+</package>

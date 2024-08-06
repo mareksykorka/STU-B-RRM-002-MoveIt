@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="zad2" type="zad2_model" name="model_publisher_node"/>
+    <node pkg="zad2" type="zad2_trajectory_plan" name="trajectory_plan_node" output="screen" launch-prefix="gnome-terminal --" />
+    <include file="$(find zad2)/launch/zad2_core.launch"/>
+</launch>

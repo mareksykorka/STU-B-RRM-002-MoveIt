@@ -1,0 +1,76 @@
+//
+// HOME
+//
+
+//
+// POSITION 1
+//
+target_pose1.position.x = 1.63244;
+target_pose1.position.y = 0.676192;
+target_pose1.position.z = 1.0324;
+target_pose1.orientation.x = -0.000771819;
+target_pose1.orientation.y = 0.825926;
+target_pose1.orientation.z = 0.000722185;
+target_pose1.orientation.w = 0.563777;
+
+//
+// CARTESIAN 1
+//
+target_pose1
+
++++++++++++++++++++
+
+geometry_msgs::Pose target_pose2;
+target_pose2.position.x = 1.66138;
+target_pose2.position.y = 0.182614;
+target_pose2.position.z = 1.10642;
+target_pose2.orientation.x = -0.000777007;
+target_pose2.orientation.y = 0.825964;
+target_pose2.orientation.z = 0.00088843;
+target_pose2.orientation.w = 0.563721;
+
++++++++++++++++++++
+
+geometry_msgs::Pose target_pose3;
+target_pose3.position.x = 1.59476;
+target_pose3.position.y = -0.475037;
+target_pose3.position.z = 0.900661;
+target_pose3.orientation.x = -0.000740694;
+target_pose3.orientation.y = 0.825837;
+target_pose3.orientation.z = 0.000781059;
+target_pose3.orientation.w = 0.563908;
+
+//
+// HOME
+//
+
+//
+// POSITION 2
+//
+target_pose4.position.x = 1.58022;
+target_pose4.position.y = -0.3400141;
+target_pose4.position.z = 0.816495;
+target_pose4.orientation.x = 0.33516;
+target_pose4.orientation.y = 0.61395;
+target_pose4.orientation.z = -0.0149517;
+target_pose4.orientation.w = 0.714498;
+
+//
+// CARTESIAN 2
+//
+target_pose4
+
++++++++++++++++++++
+
+geometry_msgs::Pose target_pose2;
+target_pose5.position.x = 1.58;
+target_pose5.position.y = -0.229689;
+target_pose5.position.z = 0.629234;
+target_pose5.orientation.x = 0.333476;
+target_pose5.orientation.y = 0.717239;
+target_pose5.orientation.z = 0.0370962;
+target_pose5.orientation.w = 0.610725;
+
+//
+// HOME
+//
